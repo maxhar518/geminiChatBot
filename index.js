@@ -1,4 +1,7 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const readline = require('readline')
+const prompt = require('prompt-sync')();
+
 
 // Check if the API key is set
 if (!process.env.API_KEY) {
@@ -13,12 +16,20 @@ async function run() {
   try {
     // Retrieve the Gemini 1.5 model
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    })
+
+    const name = prompt('Enter Any prompt');
+
 
     // Define your prompt
-    const prompt = "HTML stand for? answer only";
+    const prompt1 = `${name}`
 
     // Generate content based on the prompt
-    const result = await model.generateContent(prompt);
+    const result = await model.generateContent(prompt1);
 
     // Await the response and get the text
     const response = await result.response;
@@ -32,4 +43,4 @@ async function run() {
 }
 
 // Execute the run function
-run();
+run()
