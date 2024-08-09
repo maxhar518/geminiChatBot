@@ -17,11 +17,6 @@ async function run() {
     // Retrieve the Gemini 1.5 model
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     
-    const rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout
-    })
-
     const name = prompt('Enter Any prompt');
 
 
