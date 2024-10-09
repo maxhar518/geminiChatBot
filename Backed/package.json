@@ -1,0 +1,25 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxhar518/geminiChatBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxhar518/geminiChatBot/issues"
+  },
+  "homepage": "https://github.com/maxhar518/geminiChatBot#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.0"
+  }
+}
